@@ -11,9 +11,9 @@ import javax.persistence.*;
 @Data
 @Entity
 @Table(name = "candidatos_competencias")
-public class CandidatosCompetencias {
+public class CandidatoCompetencia {
     @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
     /*
