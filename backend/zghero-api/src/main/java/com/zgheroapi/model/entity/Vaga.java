@@ -1,4 +1,4 @@
-package com.example.zgheroapi.model.entity;
+package com.zgheroapi.model.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

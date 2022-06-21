@@ -1,7 +1,7 @@
-package com.example.zgheroapi.controller;
+package com.zgheroapi.controller;
 
-import com.example.zgheroapi.model.entity.Empresa;
-import com.example.zgheroapi.model.repository.Empresas;
+import com.zgheroapi.model.entity.Candidato;
+import com.zgheroapi.model.repository.Candidatos;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.http.HttpStatus;
@@ -10,23 +10,23 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/zghero/empresas")
-public class EmpresaController {
+@RequestMapping("/zghero/candidatos")
+public class CandidatoController {
 
-    private Empresas repository;
+    private Candidatos repository;
 
-    public EmpresaController(Empresas repository){
+    public CandidatoController(Candidatos repository){
         this.repository = repository;
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Empresa create(@RequestBody Empresa empresa){
-        return repository.save(empresa);
+    public Candidato create(@RequestBody Candidato candidato){
+        return repository.save(candidato);
     }
 
     @GetMapping
-    public List<Empresa > find(Empresa filtro){
+    public List<Candidato> find(Candidato filtro){
         ExampleMatcher matcher = ExampleMatcher
                 .matching()
                 .withIgnoreCase()
@@ -36,7 +36,5 @@ public class EmpresaController {
         Example example = Example.of(filtro, matcher);
         return repository.findAll(example);
     }
-
-
 
 }

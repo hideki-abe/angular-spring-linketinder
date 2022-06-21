@@ -1,6 +1,6 @@
-package com.example.zgheroapi.model.repository;
+package com.zgheroapi.model.repository;
 
-import com.example.zgheroapi.model.entity.Empresa;
+import com.zgheroapi.model.entity.Empresa;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface Empresas extends JpaRepository<Empresa, Integer> {

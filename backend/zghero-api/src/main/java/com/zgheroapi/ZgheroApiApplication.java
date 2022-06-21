@@ -1,4 +1,4 @@
-package com.example.zgheroapi;
+package com.zgheroapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

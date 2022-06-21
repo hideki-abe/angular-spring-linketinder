@@ -1,4 +1,4 @@
-package com.example.zgheroapi.model.entity;
+package com.zgheroapi.model.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,25 +10,15 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Data
 @Entity
-@Table(name = "vagas_competencias")
-public class VagasCompetencias {
-
+@Table(name = "competencias")
+public class Competencia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
+    @Column(name = "nome")
+    private String nome;
 
-    /*
-    @ManyToOne
-    @JoinColumn(name = "id_vagas")
-    private Vaga id_vagas;
-
-    @ManyToOne
-    @JoinColumn(name = "id_competencias")
-    private Competencia id_competencias;
-
-
-     */
     public void setId(Integer id) {
         this.id = id;
     }

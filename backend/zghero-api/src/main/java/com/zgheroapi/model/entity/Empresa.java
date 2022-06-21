@@ -1,4 +1,4 @@
-package com.example.zgheroapi.model.entity;
+package com.zgheroapi.model.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,31 +10,33 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Data
 @Entity
-@Table(name = "candidatos")
-public class Candidato {
+@Table(name = "empresas")
+public class Empresa {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
+
     @Column(name = "nome")
     private String nome;
-    @Column(name = "sobrenome")
-    private String sobrenome;
-    @Column(name = "data_de_nascimento")
-    private String data_de_nascimento;
+
+    @Column(name = "cnpj")
+    private String cnpj;
+
     @Column(name = "email")
     private String email;
-    @Column(name = "cpf")
-    private String cpf;
-    @Column(name = "pais")
-    private String pais;
-    @Column(name = "cep")
-    private String cep;
+
     @Column(name = "descricao")
     private String descricao;
+
+    @Column(name = "pais")
+    private String pais;
+
+    @Column(name = "cep")
+    private String cep;
+
     @Column(name = "senha")
     private String senha;
-
 
 }

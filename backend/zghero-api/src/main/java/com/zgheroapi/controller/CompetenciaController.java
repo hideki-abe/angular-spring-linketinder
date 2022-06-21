@@ -1,7 +1,7 @@
-package com.example.zgheroapi.controller;
+package com.zgheroapi.controller;
 
-import com.example.zgheroapi.model.entity.Competencia;
-import com.example.zgheroapi.model.repository.Competencias;
+import com.zgheroapi.model.entity.Competencia;
+import com.zgheroapi.model.repository.Competencias;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.web.bind.annotation.GetMapping;
