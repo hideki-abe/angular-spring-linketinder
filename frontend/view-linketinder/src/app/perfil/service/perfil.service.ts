@@ -10,8 +10,6 @@ import { tap } from 'rxjs/operators';
 })
 export class PerfilService {
 
-  private readonly API = './vaga.json';
-
   constructor(private httpClient: HttpClient) { }
 
   listVagas(): Observable<any> {
