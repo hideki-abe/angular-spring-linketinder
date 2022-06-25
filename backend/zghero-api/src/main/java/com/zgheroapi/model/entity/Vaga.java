@@ -23,8 +23,6 @@ public class Vaga {
     private String descricao;
     @Column(name = "lugar")
     private String lugar;
-    @Column(name = "id_empresas")
-    private Integer id_empresa;
     /*
     @ManyToOne
     @JoinColumn(name = "id_empresas")

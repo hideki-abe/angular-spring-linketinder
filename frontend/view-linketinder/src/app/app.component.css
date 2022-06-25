@@ -1,3 +1,6 @@
+.content{
+    background-color: rgb(200, 228, 252);
+}
 .navbar-text{
     color: #ffffff;
     margin-left: auto;
@@ -19,5 +22,7 @@
     color: #828181;
     margin-bottom: 16px;
 }
-  
+.text-center{
+    margin-top: 5em;
+}
 

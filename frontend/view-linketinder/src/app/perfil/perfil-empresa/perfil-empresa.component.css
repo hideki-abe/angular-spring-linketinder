@@ -17,6 +17,7 @@
 }
 
 .pessoa {
+    background-color: white;
   text-align: left;
   padding: 2em;
   height: 550px;
@@ -73,5 +74,5 @@
 }
 
 .cadastro_de_vaga:hover{
-    color: rgb(26, 26, 192);
+    color: rgb(255, 255, 255);
 }
