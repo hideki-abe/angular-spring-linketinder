@@ -1,0 +1,31 @@
+<div>
+  <div class="titulo">CADASTRO DE EMPRESA</div>
+  <div class="painel_cadastro">
+    <form class="form_cadastro">
+      <label for="nome">Nome:</label><br />
+      <input type="text" id="nome" name="nome" /><br />
+      <label for="email">Email:</label><br />
+      <input type="text" id="email" name="email" /><br />
+      <label for="cpf">Cnpj:</label><br />
+      <input type="text" id="cnpj" name="cnpj" /><br />
+      <label for="idade">País:</label><br />
+      <input type="text" id="pais" name="pais" /><br />
+      <label for="estado">Estado:</label><br />
+      <input type="text" id="estado" name="estado" /><br />
+      <label for="cep">Cep:</label><br />
+      <input type="text" id="cep" name="cep" /><br />
+      <label for="descricao">Descrição:</label><br />
+      <input type="text" id="descricao" name="descricao" /><br />
+      <label for="senha">Senha:</label><br />
+      <input type="text" id="senha" name="senha" /><br />
+    </form>
+    <button  
+    [routerLink]="['perfil']"
+    type="button" 
+    class="btn btn-primary btn-lg" 
+    type="submit" 
+    value="Cadastrar">
+      Cadastrar
+    </button>
+  </div>
+</div>

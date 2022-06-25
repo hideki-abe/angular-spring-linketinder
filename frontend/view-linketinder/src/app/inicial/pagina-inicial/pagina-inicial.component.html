@@ -1,25 +1,13 @@
-<div class="content">
-  <nav class="navbar">
-    <div class="container-fluid">
-      <span class="navbar-text">
-        LINKETINDER
-      </span>
-    </div>
-  </nav>
-  <!---
-  <div class="painel">
+<div class="painel">
     <div class="pergunta">
       Você é uma pessoa física ou jurídica?
     </div>
     <div class="d-grid gap-2 col-6 mx-auto">
-      <a href="*">
+      <a [routerLink]="['candidato']">
         <button type="button" class="btn btn-primary btn-lg">FÍSICA</button>
       </a>
-      <a href="*">
+      <a [routerLink]="['empresa']">
         <button type="button" class="btn btn-primary btn-lg">JURÍDICA</button>
       </a>
     </div>
-  </div>
-  ---->
-  <router-outlet></router-outlet>
 </div>
