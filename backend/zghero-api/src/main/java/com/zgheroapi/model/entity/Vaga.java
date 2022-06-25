@@ -14,7 +14,7 @@ import javax.persistence.*;
 public class Vaga {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
     @Column(name = "nome")
@@ -23,7 +23,8 @@ public class Vaga {
     private String descricao;
     @Column(name = "lugar")
     private String lugar;
-
+    @Column(name = "id_empresas")
+    private Integer id_empresa;
     /*
     @ManyToOne
     @JoinColumn(name = "id_empresas")

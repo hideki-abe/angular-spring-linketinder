@@ -61,3 +61,17 @@
 .email {
   filter: blur(3px);
 }
+
+.cadastro_de_vaga{
+    display: flex;
+    justify-content: center;
+    color: black;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -5em;
+}
+
+.cadastro_de_vaga:hover{
+    color: rgb(26, 26, 192);
+}

@@ -10,6 +10,8 @@ import { AppRoutingModule } from './app-routing-module';
 import { PaginaInicialComponent } from './inicial';
 import { CadastroCompetenciaComponent } from './competencia';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule }   from '@angular/forms';
+import { CadastroVagaComponent } from './vaga';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,14 @@ import { HttpClientModule } from '@angular/common/http';
     PerfilCandidatoComponent,
     PerfilEmpresaComponent,
     PaginaInicialComponent,
-    CadastroCompetenciaComponent
+    CadastroCompetenciaComponent,
+    CadastroVagaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [HttpClientModule, PerfilService],
   bootstrap: [AppComponent]

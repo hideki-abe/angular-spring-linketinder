@@ -1,11 +1,11 @@
 <div>
   <div class="titulo">CADASTRO DE CANDIDATO</div>
   <div class="painel_cadastro">
-    <form class="form_cadastro" method="post">
+    <form class="form_cadastro" method="post" #candidatosForm="ngForm" (ngSubmit)="create(candidatosForm.value)">
       <label for="nome">Nome:</label><br />
-      <input type="text" id="nome" name="nome" /><br />
+      <input type="text" id="nome" name="nome" ngModel/><br />
       <label for="sobrenome">Sobrenome:</label><br />
-      <input type="text" id="sobrenome" name="sobrenome" /><br />
+      <input type="text" id="sobrenome" name="sobrenome"ngModel /><br />
       <label for="email">Email:</label><br />
       <input
         type="text"
@@ -13,6 +13,7 @@
         maxlength="25"
         id="email"
         name="email"
+        ngModel
       /><br />
       <label for="cpf">Cpf:</label><br />
       <input
@@ -21,25 +22,20 @@
         maxlength="11"
         id="cpf"
         name="cpf"
+        ngModel
       /><br />
-      <label for="dataNasc">Data de Nascimento:</label><br />
-      <input type="text" id="dataNasc" name="dataNasc" /><br />
+      <label for="data_de_nascimento">Data de Nascimento:</label><br />
+      <input type="text" id="data_de_nascimento" name="data_de_nascimento" ngModel/><br />
       <label for="pais">País:</label><br />
-      <input type="text" id="pais" name="pais" /><br />
+      <input type="text" id="pais" name="pais" ngModel/><br />
       <label for="cep">Cep:</label><br />
-      <input type="text" id="cep" name="cep" /><br />
+      <input type="text" id="cep" name="cep"ngModel /><br />
       <label for="descricao">Descrição:</label><br />
-      <input type="text" id="descricao" name="descricao" /><br />
+      <input type="text" id="descricao" name="descricao" ngModel/><br />
       <label for="senha">Senha:</label><br />
-      <input type="text" id="senha" name="senha" /><br />
+      <input type="text" id="senha" name="senha" ngModel/><br />
+
+      <input [routerLink]="['competencias']" type="submit" value="Cadastrar" class="btn btn-primary btn-lg">
     </form>
-    <button
-      [routerLink]="['competencias']"
-      type="submit"
-      value="Cadastrar"
-      class="btn btn-primary btn-lg"
-    >
-      Cadastrar
-    </button>
   </div>
 </div>

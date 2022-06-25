@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule }   from '@angular/forms';
 import { CadastroCandidatoComponent } from './cadastro-candidato/cadastro-candidato.component';
 import { CadastroEmpresaComponent } from './cadastro-empresa/cadastro-empresa.component';
-import { CadastroService } from './shared';
+import { CadastroService } from './service';
 
 
 
@@ -12,7 +13,8 @@ import { CadastroService } from './shared';
     CadastroEmpresaComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ]
 })
 export class CadastroModule { }

@@ -1,13 +1,13 @@
 package com.zgheroapi.controller;
 
+import com.zgheroapi.model.entity.Candidato;
 import com.zgheroapi.model.entity.Vaga;
 import com.zgheroapi.model.repository.Vagas;
 import com.zgheroapi.model.repository.VagasCompetencias;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -31,6 +31,11 @@ public class VagaController {
 
         Example example = Example.of(filtro, matcher);
         return repository.findAll(example);
+    }
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public Vaga create(@RequestBody Vaga vaga){
+        return repository.save(vaga);
     }
 
 }

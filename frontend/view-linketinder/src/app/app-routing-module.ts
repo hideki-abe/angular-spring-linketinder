@@ -1,3 +1,4 @@
+import { CadastroVagaComponent } from './vaga/cadastro-vaga/cadastro-vaga.component';
 import { PerfilCandidatoComponent, PerfilEmpresaComponent } from './perfil';
 import { CadastroCompetenciaComponent } from './competencia'
 import {
@@ -41,6 +42,18 @@ export const routes: Routes = [
   {
     path: 'empresa/perfil',
     component: PerfilEmpresaComponent
+  },
+  {
+    path: 'empresa/perfil/cadastro/vaga',
+    redirectTo: 'empresa/cadastro'
+  },
+  {
+    path: 'empresa/cadastro',
+    component: CadastroVagaComponent
+  },
+   {
+    path: 'empresa/cadastro/empresa',
+    redirectTo: 'empresa/perfil'
   }
 
 ]
