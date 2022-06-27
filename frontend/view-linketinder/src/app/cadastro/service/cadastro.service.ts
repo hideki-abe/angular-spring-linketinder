@@ -23,6 +23,7 @@ export class CadastroService {
     this.httpClient.post("http://localhost:8080/zghero/empresas", empresas)
     .subscribe((response) => {
       this.router.navigateByUrl('/empresa/perfil');
+      console.log(response);
     });
 }
 
