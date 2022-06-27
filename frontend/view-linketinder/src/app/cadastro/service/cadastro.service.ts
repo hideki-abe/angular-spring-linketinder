@@ -1,19 +1,20 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CadastroService {
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient, private router: Router) { }
 
   
   onCandidatoCreate(candidatos: any){
       console.log(candidatos);
       this.httpClient.post("http://localhost:8080/zghero/candidatos", candidatos)
       .subscribe((response) => {
-        console.log(response);
+        this.router.navigateByUrl('/candidato/competencias');
       });
   }
 
@@ -21,7 +22,7 @@ export class CadastroService {
     console.log(empresas);
     this.httpClient.post("http://localhost:8080/zghero/empresas", empresas)
     .subscribe((response) => {
-      console.log(response);
+      this.router.navigateByUrl('/empresa/perfil');
     });
 }
 
