@@ -27,7 +27,16 @@ export class CadastroCandidatoComponent implements OnInit {
       descricao: string,
       senha: string
     }){
+      
       this.cadastroService.onCandidatoCreate(candidatos);
+      console.log("Cadastro realizado!");
+      
+  }
+
+  timeout(){
+    event?.preventDefault;
+    setTimeout(function() {
+    }, 3000)
   }
 
 }

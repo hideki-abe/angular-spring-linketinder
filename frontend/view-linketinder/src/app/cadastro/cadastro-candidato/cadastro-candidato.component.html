@@ -1,11 +1,16 @@
 <div>
   <div class="titulo">CADASTRO DE CANDIDATO</div>
   <div class="painel_cadastro">
-    <form class="form_cadastro" method="post" #candidatosForm="ngForm" (ngSubmit)="create(candidatosForm.value)">
+    <form
+      class="form_cadastro"
+      method="post"
+      #candidatosForm="ngForm"
+      (ngSubmit)="create(candidatosForm.value)"
+    >
       <label for="nome">Nome:</label><br />
-      <input type="text" id="nome" name="nome" ngModel/><br />
+      <input type="text" id="nome" name="nome" ngModel /><br />
       <label for="sobrenome">Sobrenome:</label><br />
-      <input type="text" id="sobrenome" name="sobrenome"ngModel /><br />
+      <input type="text" id="sobrenome" name="sobrenome" ngModel /><br />
       <label for="email">Email:</label><br />
       <input
         type="text"
@@ -25,17 +30,30 @@
         ngModel
       /><br />
       <label for="data_de_nascimento">Data de Nascimento:</label><br />
-      <input type="text" id="data_de_nascimento" name="data_de_nascimento" ngModel/><br />
+      <input
+        type="text"
+        id="data_de_nascimento"
+        name="data_de_nascimento"
+        ngModel
+      /><br />
       <label for="pais">País:</label><br />
-      <input type="text" id="pais" name="pais" ngModel/><br />
+      <input type="text" id="pais" name="pais" ngModel /><br />
       <label for="cep">Cep:</label><br />
-      <input type="text" id="cep" name="cep"ngModel /><br />
+      <input type="text" id="cep" name="cep" ngModel /><br />
       <label for="descricao">Descrição:</label><br />
-      <input type="text" id="descricao" name="descricao" ngModel/><br />
+      <input type="text" id="descricao" name="descricao" ngModel /><br />
       <label for="senha">Senha:</label><br />
-      <input type="text" id="senha" name="senha" ngModel/><br />
+      <input type="text" id="senha" name="senha" ngModel /><br />
 
-      <input [routerLink]="['competencias']" type="submit" value="Cadastrar" class="btn btn-primary btn-lg">
+        <input
+
+        (click)="timeout()"
+        [routerLink]="['competencias']"
+        type="submit"
+        value="Cadastrar"
+        class="btn btn-primary btn-lg"
+
+        />
     </form>
   </div>
 </div>
